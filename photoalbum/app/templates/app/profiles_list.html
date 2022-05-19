@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список пользователей</title>
+</head>
+<body>
+    {% csrf_token %}
+    {% for profile in profiles %}
+        <a href="../profile/{{ profile.id }}">{{ profile.username }}</a>
+    {% endfor %}
+</body>
+</html>
